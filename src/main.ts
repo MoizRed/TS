@@ -1,32 +1,81 @@
-//types 
+//array types
 
+let stringarr = ["one", "hey", "moiz"];
 
-let myname: String;
+let guitars = ["strat", "les paul", 984];
 
-let meaningOfLife: number;
+let someshit = [true, "hello ", 489];
 
-let loading: boolean;
+stringarr[0] = "hello";
 
-let somthing: any | number;
+stringarr.push("hello");
 
-let a, b: number;
+let brands: string[] = []; //how to assin the type of array in TS
 
-myname = "moiz";
+brands.push("hello");
 
-meaningOfLife = 32;
+//Tuple are positing restricing types of array
 
-loading = false;
+let myTuple: [string, number, boolean] = ["hello", 9, true];
 
-const sum = (a: number, b: any) => {
-  return a + b;
+let mixed = ["hi", 1, false];
+
+//Objects
+
+let myobj: object;
+
+myobj = [];
+
+console.log(typeof myobj);
+
+const exObj = {
+  prop1: "Data",
+  prop2: false,
 };
 
-let postID: string | number;
 
-postID = 89;
+// Type, interface is like mongoose model 
+interface gruitarist {
+    name? : string ,
+    actibe : boolean, //optional property using ? sign 
+    albums : (string | number)[]
 
-let isActive: number | boolean;
+}
 
 
-let re = /\w+/g 
+let evh : gruitarist =  {
 
+    name : "moiz",
+    actibe : true,
+    albums : [389 , "sugarleed"]
+
+}
+
+
+const greetGuitarist = (gutarist : gruitarist) =>{
+    
+
+    return `hello ${gutarist.name?.toLocaleLowerCase} ! `
+
+}
+
+
+console.log(greetGuitarist(evh))
+
+
+
+//Enums
+//"Unlike most other languages, Enums are not a type-level addistion  to JavaScript but somthing added to the language and runtim
+// what are enums? : enums are a way to define a set of named constants.
+
+enum Grade {
+
+    U ,
+    D ,
+    C ,
+    B ,
+    A ,
+
+}
+
+console.log(Grade.A)
