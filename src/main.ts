@@ -1,3 +1,6 @@
+//types 
+
+
 let myname: String;
 
 let meaningOfLife: number;

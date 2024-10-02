@@ -1,4 +1,5 @@
 "use strict";
+//types 
 let myname;
 let meaningOfLife;
 let loading;
