@@ -79,3 +79,11 @@ enum Grade {
 }
 
 console.log(Grade.A)
+
+
+
+const function = () => {
+
+
+    
+}
