@@ -1,95 +1,48 @@
+// i dont wanna give up on this one , i wanna be ... A full stack developer
 
 
-//type Aliases 
-type stringOrNumber  = string | number // ALIAS
 
-interface gruitarist {
-    name? : string ,
-    actibe : boolean, //optional property using ? sign 
-    albums : stringOrNumber
+//ALIASES 
 
+
+type one = string //simple
+type two = string | number //union
+type three = 'hello' //literal type
+
+//convert to more or less specific 
+let a : one = 'hello'
+
+let b = a as two //less specific keyword
+
+let c = a as three //more specific keyword
+
+let d = <one | number>'world' //tagged template literal
+
+
+const addOrConcat = (a: number , b: number , c : 'add' | 'concat') : number | string =>{
+
+    if (c === 'add') return a +b 
+    return '' + a + b
+ 
 }
 
-//literal types 
-
-let myname : 'dave'
-
-let userName : "Dave" | "Jhon" | "Amy"
-
-userName = "Amy"
+//type script  assersion is easy  , assesrion is focring your
 
 
-//fucntions types are easy lmao
+let myVal : string = addOrConcat(2,2,'concat') as string //assering is happening here 
 
 
 
-const add = (a : number ,b : number ) : number =>{
+//asser
+let nextVal : number = addOrConcat(2,2,'concat') as number 
 
-    return a+b
-
-
-}
-
-const logmsg = (message : any , ...args : any) : void =>{
-
-    console.log(message)
-
-}
-
-logmsg("hello",3,)
-// function              (arg : type 1  arg: type 2) : return type
-let subtract = function (c:number , d : number): number {
-
-    return c - d  
-
-}
+(10 as unknown)as string 
 
 
+//the DOM
 
 
-interface mathfunction { 
-    
-    (a: number , b: number) : number
-}
-let multiply : mathfunction = function(c,b){
-
-    return c *b 
-
-
-}
-
-
-
-//optional paramters 
-//rest paramters 
-
-//default param value  a:number = 10
-const addAll = (a:number = 10, b:number , c?:number , ...args: number[]): number => {
-
-    if (typeof c !== 'undefined'){
-    return a+b+c
-    }else{
-        return a+b + args.reduce((prev , curr) => prev + curr)
-    }
-
-}
-
-//never type
-const createError = (errmsg : string) : never =>{
-
-        throw new Error(errmsg)
-}
-
-
-const infinite = () =>{
-
-    let i :number = 1 
-    while (true){
-        i++
-        if (i> 100) break
-        
-    }
-}
-
-
-//custom type guard 
+// ! means not a null , it removes a null possiblity "!" > not null 
+const img = document.querySelector('#myID') as HTMLImageElement
+const myimg= document.getElementById('#myID')!
+const dimg = <HTMLAudioElement>document.querySelector('#myID') //these tags wont work for react 

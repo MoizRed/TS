@@ -1,44 +1,22 @@
 "use strict";
-//literal types 
-let myname;
-let userName;
-userName = "Amy";
-//fucntions types are easy lmao
-const add = (a, b) => {
-    return a + b;
+// i dont wanna give up on this one , i wanna be ... A full stack developer
+//convert to more or less specific 
+let a = 'hello';
+let b = a; //less specific keyword
+let c = a; //more specific keyword
+let d = 'world'; //tagged template literal
+const addOrConcat = (a, b, c) => {
+    if (c === 'add')
+        return a + b;
+    return '' + a + b;
 };
-const logmsg = (message, ...args) => {
-    console.log(message);
-};
-logmsg("hello", 3);
-// function              (arg : type 1  arg: type 2) : return type
-let subtract = function (c, d) {
-    return c - d;
-};
-let multiply = function (c, b) {
-    return c * b;
-};
-//optional paramters 
-//rest paramters 
-//default param value  a:number = 10
-const addAll = (a = 10, b, c, ...args) => {
-    if (typeof c !== 'undefined') {
-        return a + b + c;
-    }
-    else {
-        return a + b + args.reduce((prev, curr) => prev + curr);
-    }
-};
-//never type
-const createError = (errmsg) => {
-    throw new Error(errmsg);
-};
-const infinite = () => {
-    let i = 1;
-    while (true) {
-        i++;
-        if (i > 100)
-            break;
-    }
-};
-//custom type guard 
+//type script  assersion is easy  , assesrion is focring your
+let myVal = addOrConcat(2, 2, 'concat'); //assering is happening here 
+//asser
+let nextVal = addOrConcat(2, 2, 'concat');
+10;
+//the DOM
+// ! means not a null , it removes a null possiblity "!" > not null 
+const img = document.querySelector('#myID');
+const myimg = document.getElementById('#myID');
+const dimg = document.querySelector('#myID'); //these tags wont work for react 
