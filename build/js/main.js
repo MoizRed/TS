@@ -1,42 +1,44 @@
 "use strict";
-//array types
-let stringarr = ["one", "hey", "moiz"];
-let guitars = ["strat", "les paul", 984];
-let someshit = [true, "hello ", 489];
-stringarr[0] = "hello";
-stringarr.push("hello");
-let brands = []; //how to assin the type of array in TS
-brands.push("hello");
-//Tuple are positing restricing types of array
-let myTuple = ["hello", 9, true];
-let mixed = ["hi", 1, false];
-//Objects
-let myobj;
-myobj = [];
-console.log(typeof myobj);
-const exObj = {
-    prop1: "Data",
-    prop2: false,
+//literal types 
+let myname;
+let userName;
+userName = "Amy";
+//fucntions types are easy lmao
+const add = (a, b) => {
+    return a + b;
 };
-let evh = {
-    name: "moiz",
-    actibe: true,
-    albums: [389, "sugarleed"]
+const logmsg = (message, ...args) => {
+    console.log(message);
 };
-const greetGuitarist = (gutarist) => {
-    var _a;
-    return `hello ${(_a = gutarist.name) === null || _a === void 0 ? void 0 : _a.toLocaleLowerCase} ! `;
+logmsg("hello", 3);
+// function              (arg : type 1  arg: type 2) : return type
+let subtract = function (c, d) {
+    return c - d;
 };
-console.log(greetGuitarist(evh));
-//Enums
-//"Unlike most other languages, Enums are not a type-level addistion  to JavaScript but somthing added to the language and runtim
-// what are enums? : enums are a way to define a set of named constants.
-var Grade;
-(function (Grade) {
-    Grade[Grade["U"] = 0] = "U";
-    Grade[Grade["D"] = 1] = "D";
-    Grade[Grade["C"] = 2] = "C";
-    Grade[Grade["B"] = 3] = "B";
-    Grade[Grade["A"] = 4] = "A";
-})(Grade || (Grade = {}));
-console.log(Grade.A);
+let multiply = function (c, b) {
+    return c * b;
+};
+//optional paramters 
+//rest paramters 
+//default param value  a:number = 10
+const addAll = (a = 10, b, c, ...args) => {
+    if (typeof c !== 'undefined') {
+        return a + b + c;
+    }
+    else {
+        return a + b + args.reduce((prev, curr) => prev + curr);
+    }
+};
+//never type
+const createError = (errmsg) => {
+    throw new Error(errmsg);
+};
+const infinite = () => {
+    let i = 1;
+    while (true) {
+        i++;
+        if (i > 100)
+            break;
+    }
+};
+//custom type guard 

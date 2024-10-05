@@ -1,89 +1,95 @@
-//array types
-
-let stringarr = ["one", "hey", "moiz"];
-
-let guitars = ["strat", "les paul", 984];
-
-let someshit = [true, "hello ", 489];
-
-stringarr[0] = "hello";
-
-stringarr.push("hello");
-
-let brands: string[] = []; //how to assin the type of array in TS
-
-brands.push("hello");
-
-//Tuple are positing restricing types of array
-
-let myTuple: [string, number, boolean] = ["hello", 9, true];
-
-let mixed = ["hi", 1, false];
-
-//Objects
-
-let myobj: object;
-
-myobj = [];
-
-console.log(typeof myobj);
-
-const exObj = {
-  prop1: "Data",
-  prop2: false,
-};
 
 
-// Type, interface is like mongoose model 
+//type Aliases 
+type stringOrNumber  = string | number // ALIAS
+
 interface gruitarist {
     name? : string ,
     actibe : boolean, //optional property using ? sign 
-    albums : (string | number)[]
+    albums : stringOrNumber
+
+}
+
+//literal types 
+
+let myname : 'dave'
+
+let userName : "Dave" | "Jhon" | "Amy"
+
+userName = "Amy"
+
+
+//fucntions types are easy lmao
+
+
+
+const add = (a : number ,b : number ) : number =>{
+
+    return a+b
+
+
+}
+
+const logmsg = (message : any , ...args : any) : void =>{
+
+    console.log(message)
+
+}
+
+logmsg("hello",3,)
+// function              (arg : type 1  arg: type 2) : return type
+let subtract = function (c:number , d : number): number {
+
+    return c - d  
 
 }
 
 
-let evh : gruitarist =  {
-
-    name : "moiz",
-    actibe : true,
-    albums : [389 , "sugarleed"]
-
-}
 
 
-const greetGuitarist = (gutarist : gruitarist) =>{
+interface mathfunction { 
     
+    (a: number , b: number) : number
+}
+let multiply : mathfunction = function(c,b){
 
-    return `hello ${gutarist.name?.toLocaleLowerCase} ! `
+    return c *b 
+
 
 }
 
 
-console.log(greetGuitarist(evh))
 
+//optional paramters 
+//rest paramters 
 
+//default param value  a:number = 10
+const addAll = (a:number = 10, b:number , c?:number , ...args: number[]): number => {
 
-//Enums
-//"Unlike most other languages, Enums are not a type-level addistion  to JavaScript but somthing added to the language and runtim
-// what are enums? : enums are a way to define a set of named constants.
-
-enum Grade {
-
-    U ,
-    D ,
-    C ,
-    B ,
-    A ,
+    if (typeof c !== 'undefined'){
+    return a+b+c
+    }else{
+        return a+b + args.reduce((prev , curr) => prev + curr)
+    }
 
 }
 
-console.log(Grade.A)
+//never type
+const createError = (errmsg : string) : never =>{
 
-
-
-const function = () => {
-
-
-    
+        throw new Error(errmsg)
 }
+
+
+const infinite = () =>{
+
+    let i :number = 1 
+    while (true){
+        i++
+        if (i> 100) break
+        
+    }
+}
+
+
+//custom type guard 
