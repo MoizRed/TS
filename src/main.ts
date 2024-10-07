@@ -1,48 +1,53 @@
-// i dont wanna give up on this one , i wanna be ... A full stack developer
+//visibility modifiers
 
 
+class Coder {
 
-//ALIASES 
+  constructor(
+    public name: string, 
+    public music: string, 
+    private  age: number, 
+    protected  lang: string = "typescript")
+    {
 
+    this.name = name;
+    this.music = music;
+    this.age = age;
+    this.lang = lang;
+     }
 
-type one = string //simple
-type two = string | number //union
-type three = 'hello' //literal type
+    public getage(){
 
-//convert to more or less specific 
-let a : one = 'hello'
+        return `hello , im ${this.name}`
 
-let b = a as two //less specific keyword
+    }
 
-let c = a as three //more specific keyword
-
-let d = <one | number>'world' //tagged template literal
-
-
-const addOrConcat = (a: number , b: number , c : 'add' | 'concat') : number | string =>{
-
-    if (c === 'add') return a +b 
-    return '' + a + b
- 
 }
 
-//type script  assersion is easy  , assesrion is focring your
 
+const dave = new Coder('dave ' , "classic" , 38 )
 
-let myVal : string = addOrConcat(2,2,'concat') as string //assering is happening here 
+console.log(dave.getage())
 
+class webdev extends Coder{
+    constructor(
+       public computer : string,
+        name: string, 
+        music: string, 
+        age: number 
 
+    ){
+        super(name , music , age)
+        this.computer = computer
+    }
 
-//asser
-let nextVal : number = addOrConcat(2,2,'concat') as number 
+    public getlang()
+    {
 
-(10 as unknown)as string 
+        return 'hello im ' + this.lang
 
+    }
+    
+}
 
-//the DOM
-
-
-// ! means not a null , it removes a null possiblity "!" > not null 
-const img = document.querySelector('#myID') as HTMLImageElement
-const myimg= document.getElementById('#myID')!
-const dimg = <HTMLAudioElement>document.querySelector('#myID') //these tags wont work for react 
+const sata = new webdev("mac" , "sara" , "lofi" , 20)
