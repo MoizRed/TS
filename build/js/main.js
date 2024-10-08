@@ -28,3 +28,36 @@ class webdev extends Coder {
     }
 }
 const sata = new webdev("mac", "sara", "lofi", 20);
+class guitatist {
+    constructor(name, instrument) {
+        this.name = name;
+        this.instrument = instrument;
+    }
+    play(action) {
+        return ` i ${action} ${this.instrument}`;
+    }
+}
+const page = new guitatist("jummy", "guitar");
+////////////////////////////////////////////////////////
+class peeps {
+    static getCount() {
+        return peeps.count;
+    }
+    constructor(name) {
+        this.name = name;
+        this.name = name;
+        this.id = ++peeps.count;
+    }
+}
+peeps.count = 0;
+const John = new peeps("John");
+const steve = new peeps("steve");
+const aly = new peeps("aly");
+console.log(peeps.count);
+///////////////////////////////////////////////
+class Bands {
+    constructor() {
+        this.datastate = [];
+    }
+    get data() { }
+}
