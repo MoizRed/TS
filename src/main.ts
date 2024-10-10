@@ -17,6 +17,3 @@ else return `no valid data`
 
 
 showdetails("hello" ) 
-
-
-
