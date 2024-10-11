@@ -1,5 +1,6 @@
 "use strict";
-const Echo = (args) => args;
-const isObj = (arg) => {
-    return (typeof arg === 'object' && !Array.isArray(arg));
-};
+//default value of type script
+function showdata(name = "guest", age, country = "algera") {
+    return `${name}  - ${age}  - ${country}`;
+}
+console.log(showdata(null, 987, "hi"));
