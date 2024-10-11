@@ -17,3 +17,19 @@ function addAll(...numbs) {
 /// to convert boolean  into number just multiple it or add plus or nagetive sign
 console.log(addAll(1, 3, 6, 5, 5, -true * 1));
 //learn Typescript In Arabic 2022 - #11 - Type Annotations With Anonymous And Arrow Function
+/*
+FUNCTION
+- anonymous functoin
+-arrow function
+*/
+const add = function (num1, num2) {
+    return num1 + num2;
+};
+const hello = (num1, num2) => {
+    return num1 + num2;
+};
+console.log(hello(1, 2));
+let JOb = 'worker';
+let hi = "hi";
+hi = 3;
+console.log(hi);
