@@ -33,3 +33,10 @@ let JOb = 'worker';
 let hi = "hi";
 hi = 3;
 console.log(hi);
+const root = document.getElementById("root");
+if (root) {
+    root.innerHTML = "<h1>hellp</h1>";
+}
+else {
+    console.error("root element not fodund");
+}

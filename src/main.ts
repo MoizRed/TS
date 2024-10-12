@@ -72,5 +72,11 @@ hi = 3
 console.log(hi)
 
 
+const root = document.getElementById("root") as HTMLElement;
 
+if (root) {
+    root.innerHTML = "<h1>hellp</h1>";
+} else {
+    console.error("root element not fodund");
+}
 

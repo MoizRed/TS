@@ -1,12 +1,13 @@
 {
   "dependencies": {
     "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "dom": "^0.0.3",
     "express": "^4.21.0"
   },
   "name": "ts",
   "version": "1.0.0",
   "main": "main.js",
-  "devDependencies": {},
   "scripts": {
     "dev": "build/js/main.js"
   },
