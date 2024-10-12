@@ -139,3 +139,17 @@ Tuples is  an array with fixed LENGTH and types
 let Article : [number , string , boolean] = [1 , "TITLE" , true ]
 
 Article[1] = "hello"
+
+///Learn Typescript In Arabic 2022 - #16 - Data Types - Void And Never
+
+// void functions never return anything
+// void functions will return undefined
+//RETURN TYPE NEVER RETURNS 
+//IT THROWS AN ERROR OR NEVER FINISHES RUNNING AT ALL "INFINITE LOOP "
+
+function show(msg : srting)  {
+    while (true){
+    console.log(msg)
+}
+return
+}
