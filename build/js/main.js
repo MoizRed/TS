@@ -33,10 +33,45 @@ let JOb = 'worker';
 let hi = "hi";
 hi = 3;
 console.log(hi);
-const root = document.getElementById("root");
-if (root) {
-    root.innerHTML = "<h1>hellp</h1>";
+function Getactions(btns) {
+    console.log(`action for button up is ${btns.up}`);
+    console.log(`action for button right is ${btns.right}`);
+    console.log(`action for button down is ${btns.down}`);
+    console.log(`action for button left is ${btns.left}`);
 }
-else {
-    console.error("root element not fodund");
+Getactions({
+    up: "up arrow",
+    right: "right arrow",
+    down: "down arrow",
+    left: "left arrow",
+    x: true
+});
+function compare(num1, num2) {
+    if (num1 > num2) {
+        return 1;
+    }
+    // Learn Typescript In Arabic 2022 - #15 - Data Types - Tuple
+    /*
+    
+    Tuples is  an array with fixed LENGTH and types
+    */
+    let Article = [1, "TITLE", true];
+    Article[1] = "hello";
+    ///Learn Typescript In Arabic 2022 - #16 - Data Types - Void And Never
+    // void functions never return anything
+    // void functions will return undefined
+    //RETURN TYPE NEVER RETURNS 
+    //IT THROWS AN ERROR OR NEVER FINISHES RUNNING AT ALL "INFINITE LOOP "
+    function show(msg) {
+        while (true) {
+            console.log(msg);
+        }
+        return;
+    }
+    // 0:14 / 5:01
+    // Learn Typescript In Arabic 2022 - #17 - Data Types - Enums Part 1 
+    //done
 }
+// 0:14 / 5:01
+// Learn Typescript In Arabic 2022 - #17 - Data Types - Enums Part 1 
+//done
