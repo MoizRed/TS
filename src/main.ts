@@ -125,7 +125,7 @@ function compare(num1: number, num2: number) {
 //done
 
 
-let name : string = "ali"
+
 let age : number = 38
 let country : string = "algeria"
 
@@ -164,3 +164,48 @@ let fridge : "salad" | "tomato"
 fridge = "tomato"
 
 
+ 
+//Learn Typescript In Arabic 2022 - #19 - Data Types - type assertion
+
+
+let img = <HTMLElement> document.getElementById("img") as HTMLInputElement
+ 
+console.log(img.value);
+
+let data :  any = "1000"
+
+console.log((data as string).length)
+
+
+//Learn Typescript In Arabic 2022 - #20 - union types intersection types
+
+
+
+//Learn Typescript In Arabic 2022 - #21 - type annotations with objects
+
+
+
+//Learn Typescript In Arabic 2022 - #22 - interface decliration
+
+
+
+
+interface user {
+  readonly name : string,
+  age? : number,
+   country : string,
+   sayhello() : string
+
+   }
+
+
+
+let user1 : user ={
+
+  name : "hi",
+  country : "agleria"
+}
+
+user1 .country = "hello"
+
+// Learn Typescript In Arabic 2022 - #23 - Interface Method And Parameters
