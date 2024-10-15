@@ -203,9 +203,64 @@ interface user {
 let user1 : user ={
 
   name : "hi",
-  country : "agleria"
+  country : "agleria",
+  sayhello() {
+      return "helo"
+  },
 }
 
 user1 .country = "hello"
 
 // Learn Typescript In Arabic 2022 - #23 - Interface Method And Parameters
+
+
+// Learn Typescript In Arabic 2022 - #24 - Interface Reopen And Use Cases
+
+
+interface settings {
+
+  theme : boolean;
+  font : string ;
+
+
+}
+
+// Learn Typescript In Arabic 2022 - #25 - Interface Extend
+
+interface users{
+  id : number ; 
+  username: string ;
+  country : string
+
+}
+
+
+interface moderator extends users {
+
+  edit : boolean;
+
+
+
+}
+
+
+interface admin extends moderator {
+  delete : boolean;
+
+}
+
+let user : admin = {
+
+    id : 3,
+    username : "capous",
+    country: "alaroda",
+    edit : false,
+    delete : false,
+
+
+}
+
+// Learn Typescript In Arabic 2022 - #26 - Interface Final Discussion
+
+
+//Learn Typescript In Arabic 2022 - #27 - Class Type Annotations
