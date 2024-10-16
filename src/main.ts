@@ -3,6 +3,9 @@
 //     return `${name}  - ${age}  - ${country}`
 // }
 
+import { clear } from "console";
+import { mkdir } from "fs";
+
 // console.log(showdata(null,987,"hi"))
 
 //Learn Typescript In Arabic 2022 - #10 - Function Rest Parameter
@@ -264,3 +267,11 @@ let user : admin = {
 
 
 //Learn Typescript In Arabic 2022 - #27 - Class Type Annotations
+
+// Learn Typescript In Arabic 2022 - #28 - Class Access Modifiers And Parameters Properties
+// Learn Typescript In Arabic 2022 - #30 - Class Static Members
+// Learn Typescript In Arabic 2022 - #31 - Class Implements interface
+
+// Learn Typescript In Arabic 2022 - #32 - Abstract Classes And Members 
+
+// Learn Typescript In Arabic 2022 - #33 - Polymorphism And Method Override
