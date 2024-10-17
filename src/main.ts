@@ -275,3 +275,22 @@ let user : admin = {
 // Learn Typescript In Arabic 2022 - #32 - Abstract Classes And Members 
 
 // Learn Typescript In Arabic 2022 - #33 - Polymorphism And Method Override
+// Learn Typescript In Arabic 2022 - #34 - Generics Introduction
+// Learn Typescript In Arabic 2022 - #35 - Generics Multiple Types
+// Learn Typescript In Arabic 2022 - #37 - generic classd
+// Learn Typescript In Arabic 2022 - #37 - Generics And Interfaces
+
+
+
+export function returntype<T>(val : T) : T {
+
+  return val
+}
+
+class users<T> {
+  constructor(value : T)  {
+    
+  }
+  showmsg(msg : T) : string {
+    
+  }
